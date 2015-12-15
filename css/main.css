@@ -3,6 +3,9 @@ body {
   margin-left: 10%;
   overflow-x: hidden;
 }
+.justify {
+  text-align: justify;
+}
 #myIntro {
   padding-top: 1%;
   padding-bottom: 1%;
@@ -13,10 +16,10 @@ body {
 }
 .thumbnail.right-caption {
   float: left;
+  margin-right: 1%;
 }
 .thumbnail.right-caption img {
   float: left;
-  margin-right: 9px;
 }
 .thumbnail.right-caption .caption {
   padding: 1%;
