@@ -42,7 +42,7 @@ var loadHtml = function(id, htmlPage){
 var createHandlersForTopBar = function(){
   $(".toRetrieve").click(function(ev){
     ev.preventDefault();
-    var target = $(this).attr("src");
+    var target = $(this).attr("data-src");
     $(".active").toggleClass("active");
     $(this).toggleClass("active");
     $("#myIntro").show();
