@@ -32,6 +32,6 @@ var createHandlersForTopBar = function(){
     $(".active").toggleClass("active");
     $(this).toggleClass("active");
     loadText(target);
-  })
+  });
 
 }
