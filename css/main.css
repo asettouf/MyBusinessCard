@@ -3,6 +3,10 @@ body {
   margin-left: 10%;
   overflow-x: hidden;
 }
+#main {
+  padding-top: 0px;
+  padding-bottom: 1%;
+}
 .justify {
   text-align: justify;
 }
@@ -23,6 +27,12 @@ body {
 }
 .thumbnail.right-caption .caption {
   padding: 1%;
+}
+.navbar .navbar-right {
+  margin-right: 0px;
+}
+#bottomBar {
+  margin-bottom: 0px;
 }
 .clearFloat {
   clear: both;
