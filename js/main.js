@@ -40,7 +40,8 @@ var loadHtml = function(id, htmlPage){
  *
  */
 var createHandlersForTopBar = function(){
-  $(".toRetrieve").click(function(){
+  $(".toRetrieve").click(function(ev){
+    ev.preventDefault();
     var target = $(this).attr("src");
     $(".active").toggleClass("active");
     $(this).toggleClass("active");
@@ -53,7 +54,8 @@ var createHandlersForTopBar = function(){
  * Handle the special case of click on readings
  */
 var handleReading = function(){
-  $("#reading").click(function(){
+  $("#reading").click(function(ev){
+    ev.preventDefault();
     $("#myIntro").hide();
     $(".active").toggleClass("active");
     $(this).toggleClass("active");
