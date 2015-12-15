@@ -1,6 +1,6 @@
 $(document).ready(function(){
   init();
-})
+});
 
 /**
  * init the index.html
@@ -9,7 +9,7 @@ var init = function(){
   loadMainHtml("reception.html");
   createHandlersForTopBar();
   handleReading();
-}
+};
 
 /**
  *load main html, the reception with a category and the skills section
@@ -18,7 +18,7 @@ var init = function(){
 var loadMainHtml = function(target){
   loadHtml("reception", target);
   loadHtml("main", "skills.html");
-}
+};
 
 /**
  * load html from a page to the main contener
@@ -28,12 +28,12 @@ var loadMainHtml = function(target){
 var loadHtml = function(id, htmlPage){
   $.get(htmlPage)
     .done(function(data){
-      //console.log(data);
+      console.log(data);
       $("#" + id).html(data);
   }).error(function(data){
     console.log(data);
   });
-}
+};
 
 /**
  * Creates the click listeners on the top li tags
@@ -48,7 +48,7 @@ var createHandlersForTopBar = function(){
     $("#myIntro").show();
     loadMainHtml(target);
   });
-}
+};
 
 /**
  * Handle the special case of click on readings
@@ -61,4 +61,4 @@ var handleReading = function(){
     $(this).toggleClass("active");
     loadHtml("main", "readings.html");
   });
-}
+};
