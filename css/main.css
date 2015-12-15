@@ -27,3 +27,8 @@ body {
 .clearFloat {
   clear: both;
 }
+#bottomBar {
+  width: 80%;
+  position: fixed;
+  bottom: 0%;
+}
