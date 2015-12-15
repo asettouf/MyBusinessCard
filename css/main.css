@@ -2,6 +2,7 @@ body {
   margin-right: 10%;
   margin-left: 10%;
   overflow-x: hidden;
+  background-color: #bebeff;
 }
 #mainContainer {
   padding-top: 0px;
