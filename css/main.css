@@ -5,10 +5,6 @@ body {
   margin-bottom: 5%;
   overflow-x: hidden;
 }
-#me {
-  width: 15%;
-  height: 15%;
-}
 #menu {
   width: 80%;
   position: fixed;
@@ -27,4 +23,7 @@ body {
 }
 .thumbnail.right-caption .caption {
   padding: 1%;
+}
+.clearFloat {
+  clear: both;
 }
