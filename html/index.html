@@ -6,15 +6,29 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
    <link rel="stylesheet"  type="text/css" href="../css/main.css"/>
+   <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
 <body>
   <div id="menu" class="navbar navbar-default">
-    <div class="clickable btn btn-default navbar-btn">About me</div>
-    <div class="clickable btn btn-default navbar-btn">My Resume</div>
-    <div class="clickable btn btn-default navbar-btn">Blog</div>
+    <div class="clickable btn btn-primary navbar-btn" role="button">About me</div>
+    <div class="clickable btn btn-primary navbar-btn" role="button">My Resume</div>
+    <div class="clickable btn btn-primary navbar-btn" role="button">Blog</div>
   </div>
-<div id="myPicture"><img id="me" src="me.jpg" alt="A handsome boy"></div>
-<div id="myIntro">
+<div id="myPicture" class="thumbnail right-caption">
+  <img id="me" src="me.jpg" alt="A handsome boy"/>
+  <div class="caption">
+  <address>
+    <strong>Adonis Settouf</strong><br>
+    Zichy Jeno Utca 30.<br>
+    1066 Budapest<br>
+    <abbr title="Phone"> +36 70 596 9895</abbr><br/>
+    <a href="mailto:#">adonis.settouf@gmail.com</a>
+  </address>
+</div>
+</div>
+
+<div id="myIntro" class="jumbotron">
+  <div class="container">
   <p>
     I am a computer scientist, interested in every area of the computer sciences,
     from the computer graphics to the network security. I am as well really interested
@@ -22,7 +36,9 @@
     I love to learn new skills and I believe in the Do It Yourself philosophy acquiring knowledge
    </p>
      <p>Please find my github portfolio following this link :
-     <a href="https://github.com/asettouf">https://github.com/asettouf</p></div>
+     <a class="btn btn-primary" href="https://github.com/asettouf" role="button">Github</a></p>
+     </div>
+  </div>
 <div id="main"></div>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>

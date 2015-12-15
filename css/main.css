@@ -11,11 +11,20 @@ body {
 }
 #menu {
   width: 80%;
-  text-align: center;
   position: fixed;
   top: 1%;
 }
 .menuTitle {
   width: 33%;
   display: inline-block;
+}
+.thumbnail.right-caption {
+  float: left;
+}
+.thumbnail.right-caption img {
+  float: left;
+  margin-right: 9px;
+}
+.thumbnail.right-caption .caption {
+  padding: 1%;
 }
