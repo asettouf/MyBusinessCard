@@ -9,13 +9,18 @@
    <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
 <body>
-  <div id="menu" class="navbar navbar-default navbar-static-top">
+  <nav id="menu" class="navbar navbar-default">
     <div class="container-fluid">
-      <div class="clickable btn btn-primary navbar-btn" role="button">About me</div>
-      <div class="clickable btn btn-primary navbar-btn" role="button">My Resume</div>
-      <div class="clickable btn btn-primary navbar-btn" role="button">Blog</div>
+      <div class="navbar-header">
+        <a class="navbar-brand">Adonis Settouf, Developer</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="clickable active"><a href="#">About me</a></li>
+        <li class="clickable"><a href="#">My Resume</a></li>
+        <li class="clickable"><a href="#">Blog</a></li>
+      </ul>
     </div>
-  </div>
+  </nav>
 
 <div id="myIntro" class="jumbotron container-fluid">
   <div id="myPicture" class="thumbnail right-caption">
@@ -34,16 +39,20 @@
     I am a computer scientist, interested in every area of the computer sciences,
     from the computer graphics to the network security. I am as well really interested
     in a wide variety of topics including philosophy, social networking, and analytics.
-    I love to learn new skills and I believe in the Do It Yourself philosophy acquiring knowledge
+    I love to learn new skills and I believe in the Do It Yourself philosophy acquiring knowledge.
    </p>
  </div>
 </div>
 <div id="main"  class="jumbotron">
+  <div class="container-fluid">
   <h2>My Skills</h2>
 </div>
-<div id="bottomBar" class="navbar navbar-default navbar-static-bottom">
-  <div class="clickable btn btn-primary navbar-btn" role="button">My Github</div>
-  <div class="clickable btn btn-primary navbar-btn" role="button">My linkedin profile</div>
+</div>
+<div id="bottomBar" class="navbar navbar-default">
+  <ul class="nav navbar-nav ">
+  <li class="clickable"><a href"#">My Github</a></li>
+  <li role="separator" class="divider"></li>
+  <li class="clickable"><a href"#">My linkedin profile</a></li>
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
