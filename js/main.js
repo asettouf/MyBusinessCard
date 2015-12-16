@@ -2,6 +2,9 @@ $(document).ready(function(){
   init();
 });
 
+//@Param {int} current Position in the tabs for swiping purpose
+var currentPosition = 0;
+
 /**
  * init the index.html
  */
@@ -13,7 +16,6 @@ var init = function(){
 
 /**
  *load main html, the reception with a category and the skills section
- *
  */
 var loadMainHtml = function(target){
   loadHtml("reception", target);
@@ -22,18 +24,25 @@ var loadMainHtml = function(target){
 
 /**
  * load html from a page to the main contener
- * @param  {[string]} id [id of the tag to load html into]
- * @param  {[string]} htmlPage [name of the html page to retrieve data]
+ * @param  {string} id id of the tag to load html into
+ * @param  {string} htmlPage name of the html page to retrieve data
  */
 var loadHtml = function(id, htmlPage){
   $.get(htmlPage)
     .done(function(data){
-      //console.log(data);
+      //  console.log(data);
       $("#" + id).html(data);
   }).error(function(data){
     console.log(data);
   });
 };
+
+/**
+ * Handle swipes from a mobile device
+ */
+var handleSwiping = function(){
+    
+}
 
 /**
  * Creates the click listeners on the top li tags
