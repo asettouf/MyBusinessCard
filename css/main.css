@@ -29,8 +29,12 @@ body {
 .thumbnail.right-caption .caption {
   padding: 1%;
 }
-.navbar .navbar-right {
+.navbar #myCv {
   margin-right: 0px;
+}
+.navbar .glyphicon {
+  top: 2px;
+  right: 4.5%;
 }
 #bottomBar {
   margin-bottom: 0px;
