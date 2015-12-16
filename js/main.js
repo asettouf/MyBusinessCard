@@ -4,6 +4,8 @@ $(document).ready(function(){
 
 //@Param {int} current Position in the tabs for swiping purpose
 var currentPosition = 0;
+//@Param {array} array containing pages to load in ajax
+var pagesArray = ["reception.html", "educ.html", "career.html"];
 
 /**
  * init the index.html
@@ -24,13 +26,13 @@ var loadMainHtml = function(target){
 
 /**
  * load html from a page to the main contener
- * @param  {string} id id of the tag to load html into
- * @param  {string} htmlPage name of the html page to retrieve data
+ * @param {string} id id of the tag to load html into
+ * @param {string} htmlPage name of the html page to retrieve data
  */
 var loadHtml = function(id, htmlPage){
   $.get(htmlPage)
     .done(function(data){
-      //  console.log(data);
+      //console.log(data);
       $("#" + id).html(data);
   }).error(function(data){
     console.log(data);
@@ -41,7 +43,7 @@ var loadHtml = function(id, htmlPage){
  * Handle swipes from a mobile device
  */
 var handleSwiping = function(){
-    
+
 }
 
 /**
