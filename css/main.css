@@ -28,6 +28,7 @@ body {
 }
 .thumbnail.right-caption .caption {
   padding: 1%;
+  margin-bottom: 0px;
 }
 .navbar #myCv {
   margin-right: 0px;
