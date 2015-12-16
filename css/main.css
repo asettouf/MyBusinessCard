@@ -22,6 +22,7 @@ body {
 .thumbnail.right-caption {
   float: left;
   margin-right: 1%;
+  margin-bottom: 0.5%;
 }
 .thumbnail.right-caption img {
   float: left;
@@ -30,7 +31,7 @@ body {
   padding: 1%;
   margin-bottom: 0px;
 }
-.navbar #myCv {
+.navbar .myCv {
   margin-right: 0px;
 }
 .navbar .glyphicon {
