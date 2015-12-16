@@ -28,7 +28,7 @@ var loadMainHtml = function(target){
 var loadHtml = function(id, htmlPage){
   $.get(htmlPage)
     .done(function(data){
-      console.log(data);
+      //console.log(data);
       $("#" + id).html(data);
   }).error(function(data){
     console.log(data);
@@ -37,7 +37,6 @@ var loadHtml = function(id, htmlPage){
 
 /**
  * Creates the click listeners on the top li tags
- *
  */
 var createHandlersForTopBar = function(){
   $(".toRetrieve").click(function(ev){
