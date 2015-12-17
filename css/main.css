@@ -4,6 +4,12 @@ body {
   overflow-x: hidden;
   background-color: #bebeff;
 }
+@media (max-width: 600px) {
+  body {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
 #mainContainer {
   padding-top: 0px;
   padding-bottom: 1%;
