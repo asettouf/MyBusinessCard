@@ -69,13 +69,12 @@ var checkCurrentPosition = function(){
  * @param  {Javascript event} event The triggered event on swipe right
  */
 var swipeRightHandler = function(event){
-  currentPosition = checkCurrentPosition();
   if (currentPosition > 0){
       currentPosition--;
       toogleActiveLiTop($("#" + liIds[currentPosition]));
       loadMainHtml(pagesArray[currentPosition]);
   } else if(currentPosition == 0){
-    console.log("Nothing right  ");
+    console.log("Nothing left");
   } else{
     console.log("An error occured");
   }
@@ -86,13 +85,12 @@ var swipeRightHandler = function(event){
  * @param  {Javascript event} event The triggered event on swipe left
  */
 var swipeLeftHandler = function(event){
-    currentPosition = checkCurrentPosition();
   if (currentPosition < pagesArray.length - 1){
       currentPosition++;
       toogleActiveLiTop( $("#" +liIds[currentPosition]));
       loadMainHtml(pagesArray[currentPosition]);
   } else if(currentPosition == pagesArray.length - 1){
-    console.log("Nothing left");
+    console.log("Nothing right");
   } else{
     console.log("An error occured");
   }
@@ -115,6 +113,7 @@ var createHandlersForTopBar = function(){
     ev.preventDefault();
     var target = $(this).attr("data-src");
     toogleActiveLiTop($(this));
+    currentPosition = checkCurrentPosition();
     $("#myIntro").show();
     loadMainHtml(target);
   });
