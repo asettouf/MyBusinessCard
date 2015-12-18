@@ -1,3 +1,6 @@
+//@Constant {int} Size in px of what is considered a small screen
+var SMALLSCREENWIDTH = 600;
+
 $(document).ready(function(){
   init();
 });
@@ -18,6 +21,7 @@ var init = function(){
 var loadMainHtml = function(target){
   loadHtml("reception", target);
   loadHtml("main", "skills.html");
+  $(window).width() < SMALLSCREENWIDTH ? scrollToElement("#reception "): ""; 
 };
 
 /**
@@ -35,6 +39,12 @@ var loadHtml = function(id, htmlPage){
   });
 };
 
+var scrollToElement = function(element){
+  console.log("Scrolling");
+  $("html, body").animate({
+    scrollTop: $(element).offset().top
+  }, 1000);
+}
 /**
  * Creates the click listeners on the top li tags
  */
