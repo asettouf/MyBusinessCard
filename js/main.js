@@ -1,3 +1,6 @@
+//@Constant {int} Size in px of what is considered a small screen
+var SMALLSCREENWIDTH = 600;
+
 $(document).ready(function(){
   init();
 });
@@ -18,6 +21,7 @@ var init = function(){
   loadMainHtml("reception.html");
   createHandlersForTopBar();
   handleSwiping();
+  handleSkillClick();
 };
 
 
@@ -27,6 +31,7 @@ var init = function(){
 var loadMainHtml = function(target){
   loadHtml("reception", target);
   loadHtml("main", "skills.html");
+
 };
 
 /**
@@ -106,9 +111,21 @@ var toogleActiveLiTop = function(element){
 }
 
 /**
+ * Scroll to an element with some smoothing
+ * @param  {string} element A tag, formatted in css for jQuery
+ */
+var scrollToElement = function(element){
+  console.log("Scrolling");
+  $("html, body").animate({
+    scrollTop: $(element).offset().top
+  }, 1000);
+}
+
+/**
  * Creates the click listeners on the top li tags
  */
 var createHandlersForTopBar = function(){
+  var scroller = scrollToElement;
   $(".toRetrieve").click(function(ev){
     ev.preventDefault();
     var target = $(this).attr("data-src");
@@ -116,9 +133,20 @@ var createHandlersForTopBar = function(){
     currentPosition = checkCurrentPosition();
     $("#myIntro").show();
     loadMainHtml(target);
+    $(window).width() < SMALLSCREENWIDTH ? scroller("#reception "): "";
   });
 };
 
+var handleSkillClick = function(){
+  var scroller = scrollToElement;
+  if ($(window).width() < SMALLSCREENWIDTH){
+    $("#skills").click(function(ev){
+      ev.preventDefault();
+      scroller("#main");
+    });
+  }
+
+}
 /**
  * Handle the special case of click on readings
  */

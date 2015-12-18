@@ -19,17 +19,8 @@ body {
   width: 33%;
   display: inline-block;
 }
-.thumbnail.right-caption {
-  float: left;
-  margin-right: 1%;
-  margin-bottom: 0.5%;
-}
-.thumbnail.right-caption img {
-  float: left;
-}
-.thumbnail.right-caption .caption {
-  padding: 1%;
-  margin-bottom: 0px;
+.caption {
+  text-align: center;
 }
 #reception h2 {
   margin-top: 0px;
@@ -41,9 +32,6 @@ body {
   top: 2px;
   right: 4.5%;
 }
-.glyphicon {
-  right: 0.5%;
-}
 #bottomBar {
   margin-bottom: 0px;
 }
@@ -52,6 +40,35 @@ body {
 }
 .list-group-item {
   border: 0px;
+}
+@media (max-width: 600px) {
+  body {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .glyphicon {
+    right: 2%;
+  }
+}
+@media (min-width: 600px) {
+  .glyphicon {
+    right: 0.5%;
+  }
+  .thumbnail.right-caption {
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 0.5%;
+  }
+  .thumbnail.right-caption img {
+    float: left;
+  }
+  .thumbnail.right-caption .caption {
+    padding: 1%;
+    margin-bottom: 0px;
+  }
+  #skills {
+    display: none;
+  }
 }
 @media screen and (max-width: 475px) {
   #reception {

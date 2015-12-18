@@ -25,18 +25,8 @@ body{
   display: inline-block;
 }
 
-.thumbnail.right-caption{
-  float:left;
-  margin-right: 1%;
-  margin-bottom: 0.5%;
-  img{
-    float: left;
-  }
-
-  .caption{
-    padding: 1%;
-    margin-bottom: 0px;
-  }
+.caption{
+  text-align: center;
 }
 
 #reception {
@@ -54,9 +44,7 @@ body{
   }
 }
 
-.glyphicon{
-  right: 0.5%;
-}
+
 #bottomBar{
   margin-bottom: 0px;
 }
@@ -66,6 +54,37 @@ body{
 
 .list-group-item{
   border: 0px;
+}
+
+@media (max-width: 600px){
+  body{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .glyphicon{
+    right: 2%;
+  }
+}
+
+@media (min-width: 600px){
+  .glyphicon{
+    right: 0.5%;
+  }
+  .thumbnail.right-caption{
+    float:left;
+    margin-right: 1%;
+    margin-bottom: 0.5%;
+    img{
+      float: left;
+    }
+    .caption{
+      padding: 1%;
+      margin-bottom: 0px;
+    }
+  }
+  #skills{
+    display:none;
+  }
 }
 
 @media screen and (max-width: 475px){
