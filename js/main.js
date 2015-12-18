@@ -12,19 +12,30 @@ var currentPosition = 0;
 //@Param {array} array containing pages to load in ajax
 var pagesArray = ["reception.html", "educ.html", "career.html"];
 //@Param {array} array containing pages to load in ajax
-var liIds = ["about", "education", "career"];
+var liIds = [];
 
 /**
  * init the index.html
  */
 var init = function(){
-  loadHtml("reception.html");
+  buildLiArray();
+  loadMainHtml("reception.html");
   createHandlersForTopBar();
   handleSwiping();
   handleSkillClick();
 };
 
-
+/**
+ * create the li tags array to provide for swiping
+ */
+var buildLiArray = function(){
+  var elements = $(".toRetrieve");
+  var i = 0;
+  for (i; i<elements.length ; i++){
+    liIds[i] = elements[i].id;
+  }
+  console.log(liIds);
+};
 /**
  *load main html, the reception with a category and the skills section
  */
@@ -93,7 +104,7 @@ var swipeLeftHandler = function(event){
   if (currentPosition < pagesArray.length - 1){
       currentPosition++;
       toogleActiveLiTop( $("#" +liIds[currentPosition]));
-      loadHtml(pagesArray[currentPosition]);
+      loadMainHtml(pagesArray[currentPosition]);
   } else if(currentPosition == pagesArray.length - 1){
     console.log("Nothing right");
   } else{
@@ -132,7 +143,7 @@ var createHandlersForTopBar = function(){
     toogleActiveLiTop($(this));
     currentPosition = checkCurrentPosition();
     $("#myIntro").show();
-    loadHtml(target);
+    loadMainHtml(target);
     $(window).width() < SMALLSCREENWIDTH ? scroller("#reception "): "";
   });
 };
