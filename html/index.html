@@ -9,6 +9,7 @@
    <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
 <body>
+
   <nav id="menu" class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -44,6 +45,29 @@
 </div>
 <nav id="mainContainer" class="jumbotron">
   <div id="main" class="container-fluid">
+    <h2>My Skills</h2>
+    <p class="justify">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-info"><span class=" glyphicon
+      glyphicon-plus"></span><strong>Object Oriented Programming</strong>:
+      <em>Java</em>, <em>Python</em></li> <li class="list-group-item
+      list-group-item-info"><span class=" glyphicon
+      glyphicon-plus"></span><strong>Web development</strong>:<em>J2E</em>,
+      <em>PHP</em>, <em>HTML5</em></li> <li class="list-group-item
+      list-group-item-info"><span class=" glyphicon
+      glyphicon-plus"></span><strong>Java Frameworks</strong>: <em>Spring MVC</em>,
+      <em>Hibernate</em></li> <li class="list-group-item list-group-item-info"><span
+      class=" glyphicon glyphicon-plus"></span><strong>PHP Frameworks</strong>:
+      <em>Symfony</em>, <em>Doctrine</em></li> <li class="list-group-item
+      list-group-item-info"><span class=" glyphicon
+      glyphicon-plus"></span><strong>Python Framework</strong>: <em>Django</em></li>
+      <li class="list-group-item list-group-item-info"><span class=" glyphicon
+      glyphicon-plus"></span><strong>Javascript Frameworks</strong>:
+      <em>jQuery</em>, <em>Require</em></li> <li class="list-group-item
+      list-group-item-info"><span class=" glyphicon
+      glyphicon-plus"></span><strong>System Administration</strong>:
+      <em>CentOs</em>,<em> Windows Server</em></li> </ul>
+    </p>
 </div>
 </nav>
 <nav id="bottomBar" class="navbar navbar-default container-fluid">
@@ -58,5 +82,11 @@
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript">
+  $.mobile.autoInitializePage = false;
+  $(document).on("mobileinit", function() {
+    $.mobile.autoInitializePage = false;
+  });
+</script>
 </body>
 </html>

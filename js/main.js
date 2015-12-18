@@ -5,7 +5,7 @@ $(document).ready(function(){
   init();
 });
 
-//TODO: build li array, activate the swipe with active
+//TODO: build li arrays
 
 //@Param {int} current Position in the tabs for swiping purpose
 var currentPosition = 0;
@@ -18,7 +18,7 @@ var liIds = ["about", "education", "career"];
  * init the index.html
  */
 var init = function(){
-  loadMainHtml("reception.html");
+  loadHtml("reception.html");
   createHandlersForTopBar();
   handleSwiping();
   handleSkillClick();
@@ -30,7 +30,7 @@ var init = function(){
  */
 var loadMainHtml = function(target){
   loadHtml("reception", target);
-  loadHtml("main", "skills.html");
+  //loadHtml("main", "skills.html");
 
 };
 
@@ -56,7 +56,7 @@ var loadHtml = function(id, htmlPage){
 var handleSwiping = function(){
   $( "#reception" ).on( "swiperight", swipeRightHandler );
   $( "#reception" ).on( "swipeleft", swipeLeftHandler );
-}
+};
 
 var checkCurrentPosition = function(){
   var pageName = $(".active")[0].id;
@@ -68,7 +68,7 @@ var checkCurrentPosition = function(){
     console.log(liIds[i]);
   }
   return res;
-}
+};
 /**
  * Handles swipe right
  * @param  {Javascript event} event The triggered event on swipe right
@@ -83,7 +83,7 @@ var swipeRightHandler = function(event){
   } else{
     console.log("An error occured");
   }
-}
+};
 
 /**
  * Handles swipe left
@@ -93,13 +93,13 @@ var swipeLeftHandler = function(event){
   if (currentPosition < pagesArray.length - 1){
       currentPosition++;
       toogleActiveLiTop( $("#" +liIds[currentPosition]));
-      loadMainHtml(pagesArray[currentPosition]);
+      loadHtml(pagesArray[currentPosition]);
   } else if(currentPosition == pagesArray.length - 1){
     console.log("Nothing right");
   } else{
     console.log("An error occured");
   }
-}
+};
 
 /**
  * toogle the current active li when changing content
@@ -108,7 +108,7 @@ var swipeLeftHandler = function(event){
 var toogleActiveLiTop = function(element){
   $(".active").toggleClass("active");
   element.toggleClass("active");
-}
+};
 
 /**
  * Scroll to an element with some smoothing
@@ -119,7 +119,7 @@ var scrollToElement = function(element){
   $("html, body").animate({
     scrollTop: $(element).offset().top
   }, 1000);
-}
+};
 
 /**
  * Creates the click listeners on the top li tags
@@ -132,7 +132,7 @@ var createHandlersForTopBar = function(){
     toogleActiveLiTop($(this));
     currentPosition = checkCurrentPosition();
     $("#myIntro").show();
-    loadMainHtml(target);
+    loadHtml(target);
     $(window).width() < SMALLSCREENWIDTH ? scroller("#reception "): "";
   });
 };
@@ -146,7 +146,7 @@ var handleSkillClick = function(){
     });
   }
 
-}
+};
 /**
  * Handle the special case of click on readings
  */
