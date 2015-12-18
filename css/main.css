@@ -4,12 +4,6 @@ body {
   overflow-x: hidden;
   background-color: #bebeff;
 }
-@media (max-width: 600px) {
-  body {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-}
 #mainContainer {
   padding-top: 0px;
   padding-bottom: 1%;
@@ -25,17 +19,19 @@ body {
   width: 33%;
   display: inline-block;
 }
-.thumbnail.right-caption {
-  float: left;
-  margin-right: 1%;
-  margin-bottom: 0.5%;
-}
-.thumbnail.right-caption img {
-  float: left;
-}
-.thumbnail.right-caption .caption {
-  padding: 1%;
-  margin-bottom: 0px;
+@media (min-width: 600px) {
+  .thumbnail.right-caption {
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 0.5%;
+  }
+  .thumbnail.right-caption img {
+    float: left;
+  }
+  .thumbnail.right-caption .caption {
+    padding: 1%;
+    margin-bottom: 0px;
+  }
 }
 #reception h2 {
   margin-top: 0px;
@@ -57,6 +53,10 @@ body {
   border: 0px;
 }
 @media (max-width: 600px) {
+  body {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
   .glyphicon {
     right: 2%;
   }
