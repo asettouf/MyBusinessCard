@@ -83,8 +83,10 @@
 <script type="text/javascript" src="../js/main.js"></script>
 <script type="text/javascript">
   //hotfix to remove the loading div at the bottom
+  //And used to initialize jQuery mobile library
   $.mobile.autoInitializePage = false;
   $(document).on("mobileinit", function() {
+    $.mobile.defaultPageTransition = "slide";
     $.mobile.autoInitializePage = false;
   });
 </script>

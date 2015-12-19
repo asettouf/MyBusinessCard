@@ -67,10 +67,12 @@ function MainHandler(){
   this.handleSwiping = function(){
     var that = this;
     $( "#reception" ).on( "swiperight", function(ev){
-      that.swipeRightHandler(ev)
+      that.swipeRightHandler(ev);
+      that.scrollToElement("#reception");
     });
     $( "#reception" ).on( "swipeleft", function(ev){
-      that.swipeLeftHandler(ev)
+      that.swipeLeftHandler(ev);
+      that.scrollToElement("#reception");
     });
   };
 
