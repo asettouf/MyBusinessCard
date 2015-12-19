@@ -5,8 +5,6 @@ $(document).ready(function(){
   init();
 });
 
-//TODO: build li arrays
-
 //@Param {int} current Position in the tabs for swiping purpose
 var currentPosition = 0;
 //@Param {array} array containing pages to load in ajax
@@ -148,6 +146,9 @@ var createHandlersForTopBar = function(){
   });
 };
 
+/**
+ * scroll to skills section for small screens
+ */
 var handleSkillClick = function(){
   var scroller = scrollToElement;
   if ($(window).width() < SMALLSCREENWIDTH){
@@ -157,16 +158,4 @@ var handleSkillClick = function(){
     });
   }
 
-};
-/**
- * Handle the special case of click on readings
- */
-var handleReading = function(){
-  $("#reading").click(function(ev){
-    ev.preventDefault();
-    $("#myIntro").hide();
-    $(".active").toggleClass("active");
-    $(this).toggleClass("active");
-    loadHtml("main", "readings.html");
-  });
 };
