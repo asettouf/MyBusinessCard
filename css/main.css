@@ -4,6 +4,9 @@ body {
   overflow-x: hidden;
   background-color: #bebeff;
 }
+body .bg-white {
+  background-color: white;
+}
 #mainContainer {
   padding-top: 0px;
   padding-bottom: 1%;
