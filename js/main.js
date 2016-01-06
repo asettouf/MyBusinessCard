@@ -1,7 +1,7 @@
 
 
 $(document).ready(function(){
-  var main = new MainHandler()
+  var main = new MainHandler();
   main.init();
 });
 
